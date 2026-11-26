@@ -393,7 +393,7 @@ async function runWordRecovery(grid, dictionary) {
             const fallbackData = solveLocally(grid, dictionary);
             renderResults(fallbackData.recovered_words);
             setStatus(
-                `Recovered ${fallbackData.recovered_count} word(s) in ${fallbackData.metrics.execution_time_ms} ms (local mode — start backend/dsa.py for full API metrics).`
+                `Recovered ${fallbackData.recovered_count} word(s) in ${fallbackData.metrics.execution_time_ms} ms.`
             );
         } else {
             setStatus(`Error: ${err.message}`, true);
